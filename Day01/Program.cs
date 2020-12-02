@@ -1,9 +1,9 @@
-using System;
+﻿using System;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
 
-namespace Day1
+namespace Day01
 {
     internal class Program
     {
