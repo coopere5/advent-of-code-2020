@@ -38,6 +38,17 @@
             "stopAtEntry": false
         },
         {
+            "name": "Day04",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build03",
+            "program": "${workspaceFolder}/Day04/bin/Debug/net5.0/Day04.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Day04",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
             "name": ".NET Core Attach",
             "type": "coreclr",
             "request": "attach",
