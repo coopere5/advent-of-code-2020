@@ -170,7 +170,7 @@ namespace Day04
             }
 
             // eyr (Expiration Year) - four digits; at least 2020 and at most 2030.
-            if (int.TryParse(IssueYear, out parsed))
+            if (int.TryParse(ExpirationYear, out parsed))
             {
                 if (parsed < 2020 || parsed > 2030) return false;
             }
@@ -184,8 +184,8 @@ namespace Day04
             // If in, the number must be at least 59 and at most 76.
             if (!Regex.IsMatch(Height, "^([0-9]*)(cm|in)$")) return false;
             var heightGroups = Regex.Match(Height, "^([0-9]*)(cm|in)$").Groups;
-            if (!int.TryParse(heightGroups[0].ToString(), out parsed)) return false;
-            switch (heightGroups[1].ToString())
+            if (!int.TryParse(heightGroups[1].ToString(), out parsed)) return false;
+            switch (heightGroups[2].ToString())
             {
                 case "cm":
                     if (parsed < 150 || parsed > 193) return false;
