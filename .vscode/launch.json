@@ -41,10 +41,21 @@
             "name": "Day04",
             "type": "coreclr",
             "request": "launch",
-            "preLaunchTask": "build03",
+            "preLaunchTask": "build04",
             "program": "${workspaceFolder}/Day04/bin/Debug/net5.0/Day04.dll",
             "args": [],
             "cwd": "${workspaceFolder}/Day04",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            "name": "Day05",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build05",
+            "program": "${workspaceFolder}/Day05/bin/Debug/net5.0/Day05.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Day05",
             "console": "internalConsole",
             "stopAtEntry": false
         },
