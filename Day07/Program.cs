@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Collections.Generic;
 
-namespace Day06
+namespace Day07
 {
     internal class Program
     {
@@ -20,8 +20,33 @@ namespace Day06
             Stopwatch sw = Stopwatch.StartNew();
 
             var input = File.ReadAllLines("input.txt");
+            var dict = new Dictionary<string, string>();
+            var set = new HashSet<string>();
+            set.Add("shiny gold bags");
+            foreach (var line in input)
+            {
+                var split = line.Split(" bags contain ");
+                dict.Add(split[0], split[1]);
+            }
 
-            Console.WriteLine($"Part 1: ");
+            var running = true;
+            while (running)
+            {
+                running = false;
+                foreach (var rule in dict)
+                {
+                    foreach (var entry in set)
+                    {
+                        if (rule.Value.Contains(entry))
+                        {
+                            if (set.Add(rule.Key)) running = true;
+                            break;
+                        }
+                    }
+                }
+            }
+
+            Console.WriteLine($"Part 1: {set.Count - 1}");
 
             sw.Stop();
             Debug.WriteLine(sw.Elapsed);

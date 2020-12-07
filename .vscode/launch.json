@@ -77,7 +77,7 @@
             "preLaunchTask": "build07",
             "program": "${workspaceFolder}/Day07/bin/Debug/net5.0/Day07.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/Day06",
+            "cwd": "${workspaceFolder}/Day07",
             "console": "internalConsole",
             "stopAtEntry": false
         },
