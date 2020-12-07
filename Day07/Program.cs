@@ -22,7 +22,7 @@ namespace Day07
             var input = File.ReadAllLines("input.txt");
             var dict = new Dictionary<string, string>();
             var set = new HashSet<string>();
-            set.Add("shiny gold bags");
+            set.Add("shiny gold");
             foreach (var line in input)
             {
                 var split = line.Split(" bags contain ");
