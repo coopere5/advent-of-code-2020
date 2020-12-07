@@ -64,7 +64,7 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build06",
-            "program": "${workspaceFolder}/Day05/bin/Debug/net5.0/Day06.dll",
+            "program": "${workspaceFolder}/Day06/bin/Debug/net5.0/Day06.dll",
             "args": [],
             "cwd": "${workspaceFolder}/Day06",
             "console": "internalConsole",
