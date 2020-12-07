@@ -1,8 +1,9 @@
-﻿using System;
+using System;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
 namespace Day07
 {
@@ -46,9 +47,9 @@ namespace Day07
                 }
             }
 
-            Console.WriteLine($"Part 1: {set.Count - 1}");
-
             sw.Stop();
+
+            Console.WriteLine($"Part 1: {set.Count - 1}");
             Debug.WriteLine(sw.Elapsed);
         }
 
@@ -57,11 +58,39 @@ namespace Day07
             Stopwatch sw = Stopwatch.StartNew();
 
             var input = File.ReadAllLines("input.txt");
+            var dict = new Dictionary<string, Dictionary<string, int>>();
 
-            Console.WriteLine($"Part 2: ");
+            foreach (var line in input)
+            {
+                var split = line.Split(" bags contain ");
+                var matches = Regex.Matches(split[1], @"([0-9]+) (\w+ \w+) bags?");
+                var contains = new Dictionary<string, int>();
+                foreach (Match match in matches)
+                {
+                    GroupCollection groups = match.Groups;
+                    contains.Add(groups[2].ToString(), int.Parse(groups[1].ToString()));
+                }
+                dict.Add(split[0], contains);
+            }
+
+            var total = CheckBag(dict, "shiny gold", 1);
 
             sw.Stop();
+
+            Console.WriteLine($"Part 2: {total}");
             Debug.WriteLine(sw.Elapsed);
+        }
+
+        private static int CheckBag(Dictionary<string, Dictionary<string, int>> dict, string bag, int count)
+        {
+            int total = 0;
+            var contains = dict[bag];
+            total += contains.Values.Sum() * count;
+            foreach (var item in contains)
+            {
+                total += CheckBag(dict, item.Key, item.Value) * count;
+            }
+            return total;
         }
     }
 }
