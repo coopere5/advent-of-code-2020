@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Linq;
 using System.IO;
 
 namespace Day09
@@ -16,7 +17,11 @@ namespace Day09
         {
             Stopwatch sw = Stopwatch.StartNew();
 
-            var input = File.ReadAllLines("input.txt");
+            var input = File.ReadAllLines("input.txt").Select(int.Parse);
+
+            foreach (var line in input)
+            {
+            }
 
             sw.Stop();
             Console.WriteLine($"Part 1: ");
@@ -27,7 +32,11 @@ namespace Day09
         {
             Stopwatch sw = Stopwatch.StartNew();
 
-            var input = File.ReadAllLines("input.txt");
+            var input = File.ReadAllLines("input.txt").Select(int.Parse);
+
+            foreach (var line in input)
+            {
+            }
 
             sw.Stop();
             Console.WriteLine($"Part 2: ");
