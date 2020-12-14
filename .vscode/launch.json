@@ -93,6 +93,72 @@
             "stopAtEntry": false
         },
         {
+            "name": "Day09",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build09",
+            "program": "${workspaceFolder}/Day09/bin/Debug/net5.0/Day09.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Day09",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            "name": "Day10",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build10",
+            "program": "${workspaceFolder}/Day10/bin/Debug/net5.0/Day10.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Day10",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            "name": "Day11",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build11",
+            "program": "${workspaceFolder}/Day11/bin/Debug/net5.0/Day11.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Day11",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            "name": "Day12",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build12",
+            "program": "${workspaceFolder}/Day12/bin/Debug/net5.0/Day12.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Day12",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            "name": "Day13",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build13",
+            "program": "${workspaceFolder}/Day13/bin/Debug/net5.0/Day13.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Day13",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            "name": "Day14",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build14",
+            "program": "${workspaceFolder}/Day14/bin/Debug/net5.0/Day14.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Day14",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
             "name": ".NET Core Attach",
             "type": "coreclr",
             "request": "attach",
